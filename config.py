@@ -1,2 +1,2 @@
-token = "6554090351:AAFaNisT8p1IGyb53CpXDpL7w_nvdICDwbk"
+token = "get ur own token"
 DATABASE = "project.db"
