@@ -54,9 +54,6 @@ class DB_Manager:
         sql = 'INSERT OR IGNORE INTO skills (skill_name) values(?)'
         data = skills
         self.__executemany(sql, data)
-        sql = 'INSERT OR IGNORE INTO status (status_name) values(?)'
-        data = statuses
-        self.__executemany(sql, data)
 
 
     def insert_project(self, data):
@@ -130,8 +127,5 @@ if __name__ == '__main__':
     manager = DB_Manager(DATABASE)
     manager.create_tables()
     manager.default_insert()
-    conn = sqlite3.connect("project.db")
-    cur = conn.cursor()
-    cur.execute("""ALTER TABLE projects ADD COLUMN enjoyability INTEGER""") #in that column write how much you enjoyed making the project on a scale of 1-10
     
     
